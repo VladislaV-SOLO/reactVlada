@@ -28,7 +28,6 @@ function Modal(params) {
     }, [userOrder])
 
 
-
     console.log(user);
     console.log('userOrder', userOrder);
 
@@ -49,6 +48,13 @@ function Modal(params) {
 
             <br />
             <Button title='Запросить следующие данные' onClick={() => setUserOrder(prevState => prevState + 1)} />
+            <Button title='Запросить предыдущие данные' onClick={() => userOrder !== 1 && setUserOrder(prevState => prevState - 1)} />
+            {/* <Button title='Запросить предыдущие данные'
+             onClick={() => {
+                if (userOrder !== 1) {
+                    setUserOrder(prevState => prevState - 1)}
+                }
+             } /> */}
             <Button title='Закрыть' onClick={onClose} />
         </div>
 
