@@ -3,9 +3,9 @@ import './style.css'
 
 
 
-export function Input() {
-
+export function Input(props) {
+    const { onChange, label } = props
     return <>
-        <input type="text" className="todo-control-input" />
+        <input onChange={onChange} type="text" className="todo-control-input" value={label} />
     </>
 }

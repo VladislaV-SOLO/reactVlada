@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { classNames } from '../../utils';
 import './style.css'
 
@@ -6,9 +6,9 @@ import './style.css'
 
 
 export function Button(props) {
-    const { title } = props
+    const { title, onClick } = props
 
-    return <button className="btn add-btn">{title}</button>
+    return <button onClick={onClick} className="btn add-btn">{title}</button>
 }
 
 
